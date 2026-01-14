@@ -1,0 +1,19 @@
+states: A B C D
+start: A
+final: B
+in: 0 1
+out: 0 1 2 3 x
+
+# din_stare  simbol_intrare  simbol_iesire  in_stare
+
+A 1 1x B
+A 1 lambda D
+
+B 0 lambda C
+B 1 lambda D
+
+C 0 0 B
+C 1 1 B
+
+D 0 2 B
+D 1 3 B
